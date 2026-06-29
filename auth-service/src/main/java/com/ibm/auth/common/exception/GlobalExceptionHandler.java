@@ -49,7 +49,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiResponse<Object>> handleOtpNotFound(OtpNotFoundException ex){
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(new ApiResponse<>(false, ex.getMessage(), null);
+                .body(new ApiResponse<>(false, ex.getMessage(), null));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
